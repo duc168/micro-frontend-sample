@@ -8,5 +8,5 @@ RUN yarn prod
 
 FROM nginx:stable-alpine
 RUN mkdir /usr/share/nginx/html
-COPY --from=build-stage /app/build/ /usr/share/nginx/html
+COPY --from=build-stage /app/dist/ /usr/share/nginx/html
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf

@@ -3,7 +3,8 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 module.exports = {
     mode: 'development',
     devServer: {
-        port: 8080
+        port: 8080,
+        open: true
     },
     plugins: [
         new ModuleFederationPlugin({
